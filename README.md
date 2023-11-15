@@ -13,7 +13,7 @@ During the coding my project i have Exception handling to the inputs that the pl
 ![image](https://github.com/Rhyspascoe01/Comp-3016-Set-Exercises/assets/91668493/a398ef2f-c1c6-4723-aff3-576138ca48b3)
 
 #### Futher Details
-
+My prototype has two classes, a base class for the game function which contains the four main voids within the game which control the start and end of the game as well as store all variables and a player class that inherites all of the  variables that the player is able to use such as the inventory status and which room the player is in. It also contains several unique voids such as the KeyCountUp which counts the three keys in the final puzzle, the inventory void which adds things to your inventory and the restart which resets all of the players inventory and position in the ship. My code also includes several private variables that aren't able to be controlled by the player such as the valves within the boiler room or the vents in the engine room. Most of the repeated commands such as movement are done using switch statements using the roomnumber as the cases to switch between rooms and almost all the text is loaded in using file loading.
 #### Video Link
 
 #### Link to repository
