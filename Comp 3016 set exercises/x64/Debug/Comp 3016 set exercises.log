@@ -1,0 +1,4 @@
+﻿  St_Anne.cpp
+C:\Users\pasco\source\repos\Comp 3016 set exercises\Comp 3016 set exercises\St_Anne.cpp(45,19): warning C4101: 'mynum': unreferenced local variable
+C:\Users\pasco\source\repos\Comp 3016 set exercises\Comp 3016 set exercises\St_Anne.cpp(790,24): warning C4101: 'inttwo': unreferenced local variable
+  Comp 3016 set exercises.vcxproj -> C:\Users\pasco\source\repos\Comp 3016 set exercises\x64\Debug\Comp 3016 set exercises.exe

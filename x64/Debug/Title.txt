@@ -1,0 +1,8 @@
+SSSSSSSS\      TTTT                           AAAA              NN\                 NN\                      
+SS             TTTT                         AAA   AAA           NNNNNNNNNNNNNNNN    NNNNNNNNNNNNNNNN          EEEEEE
+SS           TTTTTTTT                     AAAA     AAAA         NNNNNNNNNNNNNNNN    NNNNNNNNNNNNNNNN        EE     EE
+ SSSSSSS       TTTT                      AAAAAAAAAAAAAA         NNNN        NNNN    NNNN        NNNN        EE     EE
+      SS       TTTT                    AAAA          AAAA       NNNN        NNNN    NNNN        NNNN        EEEEEEEE
+      SS       TTTT     ....         AAAA              AAAA     NNNN        NNNN    NNNN        NNNN        EE
+S     SS       TTTT\    ....       AAAA                  AAAA   NNNN        NNNN \  NNNN        NNNN \      EE      EE
+SSSSSSSS       TTTTTT   ....      AAAA                    AAAA  NNNN        NNNNN   NNNN        NNNNN        EEEEEEEE

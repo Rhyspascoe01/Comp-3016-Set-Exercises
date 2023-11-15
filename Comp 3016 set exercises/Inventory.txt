@@ -1,0 +1,8 @@
+Within your inventory there is a flashlight and a chocolate bar.
+Within your inventory there is a flashlight, a chocolate bar and small key.
+Within your inventory there is a flashlight, a chocolate bar, a toolbox key and a pair of bolt cutters.
+Within your inventory there is a flashlight, a chocolate bar, a toolbox key, a pair of bolt cutters and a screwdriver.
+Within your inventory there is a flashlight, a chocolate bar, a toolbox key, a pair of bolt cutters and a keycard.
+Within your inventory there is a flashlight, a chocolate bar, a toolbox key, a pair of bolt cutters, a keycard and a screwdriver.
+Within your inventory there is a flashlight, a chocolate bar, a toolbox key, a pair of bolt cutters, a keycard, a screwdriver and a coat hanger.
+Within your inventory there is a flashlight, a chocolate bar, a toolbox key, a pair of bolt cutters, a keycard, a screwdriver,a coat hanger and the exit key.
