@@ -19,13 +19,23 @@ void game_function::start() {
     string start;
     string titleoutput;
     ifstream fileToRead("Title.txt");
-    if (fileToRead.is_open()) {
-        while (getline(fileToRead, titleoutput))
-        {
-            cout << titleoutput << "\n";
-        }
+    try {
+        if (fileToRead.is_open()) {
+            while (getline(fileToRead, titleoutput))
+            {
+                cout << titleoutput << "\n";
+            }
 
+        }
+        else {
+            throw 3;
+        }
+       
     }
+    catch (int intthree) {
+      cout << "ERROR : FILE NOT FOUND" << "\n";
+    }
+    
     fileToRead.close();
 
     cout << " " << "\n";
@@ -53,7 +63,7 @@ void game_function::run() {
     cout << "Now you could hear the sound of the sirens sounding around you, the ship entirely dark baring the flashing red warning lights." << "\n";
     cout << "As far as you were aware you were the only one left on the ship, baring the thing that had entered." << "\n";
     cout << "Your goal now was a simple one, to escape with your life entact and to trap whatever was inside the ship within  the vessel." << "\n";
-    cout << "All you needed to do was to get to the conrols at the top of the ship." << "\n";
+    cout << "All you needed to do was to get to the top of the ship." << "\n";
     cout << " " << "\n";
 }
 void game_function::inputs() {
@@ -61,8 +71,20 @@ void game_function::inputs() {
     string textoutput;
     string inventoryoutput;
     ifstream fileToRead("GameText.txt");
-    getline(fileToRead, textoutput);
-    cout << textoutput << "\n";
+    try {
+        if (fileToRead.is_open()) {
+            getline(fileToRead, textoutput);
+            cout << textoutput << "\n";
+
+        }
+        else {
+            throw 4;
+        }
+
+    }
+    catch (int intfour) {
+        cout << "ERROR : FILE NOT FOUND" << "\n";
+    }
     player New_Player;
     while (gameclear == false)
     {
@@ -152,6 +174,9 @@ void game_function::inputs() {
                         cout << textoutput << "\n";
                         New_Player.roomnumber = 24;
                         break;
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
+
                     }
                     break;
                 }
@@ -181,6 +206,8 @@ void game_function::inputs() {
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         break;
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
                     }
                     break;
                 }
@@ -216,14 +243,14 @@ void game_function::inputs() {
                         }
                         else {
                             New_Player.roomnumber = 4;
-                            fileToRead.seekg(2126);
+                            fileToRead.seekg(16917);
                             getline(fileToRead, textoutput);
                             cout << textoutput << "\n";
                             break;
                         }
                     case 8:
                         New_Player.roomnumber = 6;
-                        fileToRead.seekg(3774);
+                        fileToRead.seekg(16605);
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         break;
@@ -251,7 +278,7 @@ void game_function::inputs() {
                             break;
                         
                     case 11:
-                        fileToRead.seekg(3774);
+                        fileToRead.seekg(16605);
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         New_Player.roomnumber = 6;
@@ -264,25 +291,25 @@ void game_function::inputs() {
                         break;
                     case 14:
                         New_Player.roomnumber = 6;
-                        fileToRead.seekg(3774);
+                        fileToRead.seekg(16605);
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         break;
                     case 15:
                         New_Player.roomnumber = 14;
-                        fileToRead.seekg(8594);
+                        fileToRead.seekg(17159);
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         break;
                     case 16:
                         New_Player.roomnumber = 14;
-                        fileToRead.seekg(8594);
+                        fileToRead.seekg(17159);
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         break;
                     case 18:
                         New_Player.roomnumber = 17;
-                        fileToRead.seekg(10540);
+                        fileToRead.seekg(17422);
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         break;
@@ -316,6 +343,8 @@ void game_function::inputs() {
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         break;
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
                     }
                     break;
  }
@@ -353,6 +382,8 @@ void game_function::inputs() {
                             cout << textoutput << "\n";
                             break;
                         }
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
                     }
                     break;
   }
@@ -372,6 +403,8 @@ void game_function::inputs() {
                         HGObtained = true;
                         killswitch = false;
                         break;
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
                     }
                     break;
   }
@@ -397,34 +430,34 @@ void game_function::inputs() {
                     cout << textoutput << "\n";
                     break;
                 }
-                else if (inputstring == "Enter_Door_1002" && New_Player.roomnumber == 18 && killswitch == false) {
+                else if (inputstring == "Enter_Room_1002" && New_Player.roomnumber == 18 && killswitch == false) {
                     New_Player.roomnumber = 20;
                     fileToRead.seekg(11417);
                     getline(fileToRead, textoutput);
                     cout << textoutput << "\n";
                     break;
                 }
-                else if (inputstring == "Enter_Door_1003" && New_Player.roomnumber == 18 && killswitch == false) {
+                else if (inputstring == "Enter_Room_1003" && New_Player.roomnumber == 18 && killswitch == false) {
                     New_Player.roomnumber = 21;
                     fileToRead.seekg(11605);
                     getline(fileToRead, textoutput);
                     cout << textoutput << "\n";
                     break;
                 }
-                else if (inputstring == "Enter_Door_1004" && New_Player.roomnumber == 18 && killswitch == false) {
+                else if (inputstring == "Enter_Room_1004" && New_Player.roomnumber == 18 && killswitch == false) {
                     fileToRead.seekg(12213);
                     getline(fileToRead, textoutput);
                     cout << textoutput << "\n";
                     break;
                 }
-                else if (inputstring == "Enter_Door_1005" && New_Player.roomnumber == 18 && killswitch == false) {
+                else if (inputstring == "Enter_Room_1005" && New_Player.roomnumber == 18 && killswitch == false) {
                     New_Player.roomnumber = 22;
                     fileToRead.seekg(12312);
                     getline(fileToRead, textoutput);
                     cout << textoutput << "\n";
                     break;
                 }
-                else if (inputstring == "Enter_Door_1006" && New_Player.roomnumber == 18 && killswitch == false) {
+                else if (inputstring == "Enter_Room_1006" && New_Player.roomnumber == 18 && killswitch == false) {
                     New_Player.roomnumber = 23;
                     fileToRead.seekg(12809);
                     getline(fileToRead, textoutput);
@@ -438,7 +471,7 @@ void game_function::inputs() {
                     cout << textoutput << "\n";
                     break;
                 }
-                else if (inputstring == "Enter_Door_1002" && New_Player.roomnumber == 18 && killswitch == true) {
+                else if (inputstring == "Enter_Room_1002" && New_Player.roomnumber == 18 && killswitch == true) {
                     New_Player.roomnumber = 20;
                     fileToRead.seekg(13735);
                     getline(fileToRead, textoutput);
@@ -462,7 +495,7 @@ void game_function::inputs() {
                     New_Player.inventorycountup();
                     break;
                 }
-                else if (inputstring == "Look_At_Hole" && New_Player.roomnumber == 9 && CRNValve == false)
+                else if (inputstring == "Look_At_Hole" && New_Player.roomnumber == 9 && CRNValve == true)
                 {
                     fileToRead.seekg(5795 );
                     getline(fileToRead, textoutput);
@@ -499,7 +532,7 @@ void game_function::inputs() {
                     New_Player.inventorycountup();
                     break;
                 }
-                else if (inputstring == "Get_Key") {
+                else if (inputstring == "Grab_Key") {
                     switch (New_Player.roomnumber) {
                     case 22:
                         if (New_Player.CHObtained == true && New_Player.secondkeycheck == false) {
@@ -516,17 +549,22 @@ void game_function::inputs() {
                             break;
                         }
                     case 23:
-                        fileToRead.seekg(12940);
-                        getline(fileToRead, textoutput);
-                        cout << textoutput << "\n";
-                        New_Player.keycountup();
-                        killswitch = true;
-                        break;
+                        if (lastkeycheck == false)
+                        {
+                            fileToRead.seekg(12940);
+                            getline(fileToRead, textoutput);
+                            cout << textoutput << "\n";
+                            New_Player.keycountup();
+                            killswitch = true;
+                            break;
+                        }
                     case 20:
                         getline(fileToRead, textoutput);
                         cout << textoutput << "\n";
                         New_Player.inventorycountup();
                         break;
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
                     }
                     break;
  }
@@ -563,7 +601,7 @@ void game_function::inputs() {
                     fileToRead.seekg(5242);
                     getline(fileToRead, textoutput);
                     cout << textoutput << "\n";
-                    CRNValve = false;
+                    CRNValve = true;
                     break;
                 }
                 else if (inputstring == "Turn_Middle_Valve")
@@ -591,6 +629,8 @@ void game_function::inputs() {
                             cout << textoutput << "\n";
                             ERValve = false;
                             break;
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
 
                         }
                     }
@@ -675,6 +715,8 @@ void game_function::inputs() {
                             cout << textoutput << "\n";
                             break;
                         }
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
                     }
                 }
                 else if (inputstring == "Enter_43652" && New_Player.roomnumber == 20 && killswitch == true) {
@@ -708,7 +750,8 @@ void game_function::inputs() {
                             gameclear = true;
                             break;
                         }
-                        
+                    default:
+                        cout << "Sorry, it doesn't seem you can do that here." << "\n";
                     }
                     break;
                 }
@@ -733,6 +776,17 @@ void game_function::inputs() {
                 else if (inputstring == "Check_Inventory")
                 {
                     ifstream inventoryread("Inventory.txt");
+                    try {
+                        if (inventoryread.is_open()) {
+                        }
+                        else {
+                            throw 5;
+                        }
+
+                    }
+                    catch (int intfive) {
+                        cout << "ERROR : FILE NOT FOUND" << "\n";
+                    }
                     switch (New_Player.numitemsinventory) {
                     case 2:
                         getline(inventoryread, textoutput);

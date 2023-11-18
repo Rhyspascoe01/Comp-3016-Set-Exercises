@@ -20,14 +20,14 @@ public :
 	bool EKObtained = false;
 	bool HGObtained = false;
 private:
-	bool killswitch = true;
+	bool killswitch = false;
 	bool Game_Over = false;
 	bool CRNValve = false;
 	bool ERValve = false;
 	bool CRSValve = false;
 	bool EngineVents = false;
 	bool latchstatus;
-	bool doorstatus = true;
+	bool doorstatus;
 	bool codecheck = false;
 	bool gameclear = false;
 };
@@ -42,10 +42,13 @@ public:
 		switch (roomnumber) {
 		case 19:
 			firstkeycheck = true;
+			break;
 		case 22:
 			secondkeycheck = true;
+			break;
 		case 23:
 			lastkeycheck = true;
+			break;
 		}
 	}
 	void inventorycountup() {
@@ -53,18 +56,30 @@ public:
 		switch (roomnumber) {
 		case 2:
 			BCObtained = true;
+			break;
 		case 5:
 			TBKObtained = true;
+			break;
 		case 9:
 			SDObtained = true;
+			break;
 		case 16:
 			KCObtained = true;
+			break;
 		case 22:
 			CHObtained = true;
+			break;
 		case 20:
-			HGObtained = true;
-		case 24:
-			EKObtained = true;
+			if (HGObtained == false)
+			{
+				HGObtained = true;
+				break;
+			}
+			else {
+				EKObtained = true;
+				break;
+			}
+		
 
 		}
 	}
