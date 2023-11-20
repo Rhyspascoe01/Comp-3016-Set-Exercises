@@ -10,7 +10,7 @@ My game, called St.Anne, is a text adventure game where the player is stuck on a
 Below is the UML Design diagram that i used to design the two classes of my project : ![image](https://github.com/Rhyspascoe01/Comp-3016-Set-Exercises/assets/91668493/220eb97e-ead4-415c-a685-4dfa609b5c31)
 
 #### Exception handling and test cases
-During the coding my project i have Exception handling to the inputs that the player uses as a Player could type something in that i have not coded a response for so i have coded that the program tries the certain input triggers and if none of those have been triggered then it triggers the catch statement which shows a error message and allows the user to type a different input. I have also done several test cases for my project of which you can read below :
+During the coding my project i have used Exception handling to the inputs that the player uses as a Player could type something in that i have not coded a response for so i have coded that the program tries the certain input triggers and if none of those have been triggered then it triggers the catch statement which shows a error message and allows the user to type a different input as well as using it when text files are being loaded into the game where if a file is not able to be loaded then it displays a error message onto the screen stating that fact. I have also done several test cases for my project of which you can read below :
 ![image](https://github.com/Rhyspascoe01/Comp-3016-Set-Exercises/assets/91668493/a398ef2f-c1c6-4723-aff3-576138ca48b3)
 
 #### Futher Details
